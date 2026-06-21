@@ -5,8 +5,9 @@ import { motion, useAnimationControls } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 const PANEL_COUNT = 6;
-const STEP = 0.3;
-const STAGGER = 0.02;
+const STEP = 0.5;
+const STAGGER = 0.06;
+const HOLD = 0.15;
 
 export default function StairTransition() {
   const pathname = usePathname();
@@ -27,6 +28,9 @@ export default function StairTransition() {
         top: "0%",
         transition: { duration: STEP, ease: "easeInOut", delay: STAGGER * i },
       }));
+      if (cancelled) return;
+      // Brief hold while fully covered
+      await new Promise((resolve) => setTimeout(resolve, HOLD * 1000));
       if (cancelled) return;
       // Reveal the new page
       await controls.start((i: number) => ({
