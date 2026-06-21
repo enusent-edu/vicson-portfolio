@@ -14,10 +14,9 @@ export default function PageTransition({
     <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={pathname}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        transition={{ duration: 0.4, delay: 0.3 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.3, delay: 0.4 } }}
+        exit={{ opacity: 0, transition: { duration: 0.2 } }}
       >
         {children}
       </motion.div>

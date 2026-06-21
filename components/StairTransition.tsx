@@ -4,14 +4,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 const stairAnimation = {
-  initial: { top: "0%" },
-  animate: { top: "100%" },
-  exit: { top: "0%" },
-};
-
-const reverseIndex = (index: number) => {
-  const total = 6;
-  return total - index - 1;
+  initial: { top: "100%" },
+  enter: (i: number) => ({
+    top: "0%",
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut" as const,
+      delay: 0.02 * i,
+    },
+  }),
+  exit: (i: number) => ({
+    top: "100%",
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut" as const,
+      delay: 0.02 * i,
+    },
+  }),
 };
 
 export default function StairTransition() {
@@ -23,16 +32,12 @@ export default function StairTransition() {
         {[...Array(6)].map((_, index) => (
           <motion.div
             key={index}
+            custom={index}
             className="h-full w-full stair-panel relative"
             variants={stairAnimation}
             initial="initial"
-            animate="animate"
+            animate="enter"
             exit="exit"
-            transition={{
-              duration: 0.4,
-              ease: "easeInOut",
-              delay: reverseIndex(index) * 0.05,
-            }}
           />
         ))}
       </div>
