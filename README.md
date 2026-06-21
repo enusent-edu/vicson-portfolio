@@ -41,8 +41,8 @@ Runs at `http://localhost:3000`.
    cp .env.example .env   # fill real EMAIL_USER / EMAIL_PASS
    docker compose up -d --build
    ```
-3. App listens on host port **3014** (mapped from container's 3000) — chosen to avoid clashing with Bookify (3012) and TenantPro (3013).
-4. Route `portfolio.powerlife-shop.com` to `http://100.115.50.106:3014` (HP Server Tailscale IP) via the Cloudflare Tunnel `cf71b844` config — **use the CF API**, never edit `config.yml` directly (per project rule, tunnel is remote-managed via CF Zero Trust).
+3. App listens on host port **3015** (mapped from container's 3000) — `3014` is already in use by the PharmaPOS demo on HP Server; ports in use: 3011 (clinic), 3012 (bookify), 3013 (tenant), 3014 (pharmapos), 3001 (uptime-kuma).
+4. Route `portfolio.powerlife-shop.com` to `http://100.115.50.106:3015` (HP Server Tailscale IP) via the Cloudflare Tunnel `cf71b844` config — **use the CF API**, never edit `config.yml` directly (per project rule, tunnel is remote-managed via CF Zero Trust).
 
 ## Notes
 
