@@ -1,0 +1,15 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_GA_MEASUREMENT_ID: ${NEXT_PUBLIC_GA_MEASUREMENT_ID:-}
+    container_name: vicson-portfolio
+    restart: unless-stopped
+    ports:
+      - "3014:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production

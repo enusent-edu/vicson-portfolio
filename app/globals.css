@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1c1c22;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #00ff99;
+  color: #1c1c22;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1c1c22;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #00ff99;
+  border-radius: 4px;
+}
+
+/* Typewriter cursor */
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.9em;
+  background-color: #00ff99;
+  margin-left: 3px;
+  animation: blink 1s infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Outline text effect for numbering */
+.text-outline {
+  -webkit-text-stroke: 1px #ffffff66;
+}
+.text-outline-hover {
+  -webkit-text-stroke: 1px #00ff99;
+}
+
+/* Stair transition panels */
+.stair-panel {
+  background-color: #00ff99;
+}

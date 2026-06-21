@@ -1,0 +1,105 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="300" cy="300" r="280"/>
+    </clipPath>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1c22"/>
+      <stop offset="100%" stop-color="#26262e"/>
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ff99"/>
+      <stop offset="100%" stop-color="#00c97a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <circle cx="300" cy="300" r="280" fill="url(#bgGrad)"/>
+
+  <g clip-path="url(#circleClip)">
+    <!-- floor shadow -->
+    <ellipse cx="300" cy="560" rx="220" ry="30" fill="#00ff99" opacity="0.08"/>
+
+    <!-- desk -->
+    <rect x="60" y="460" width="480" height="20" rx="4" fill="#33333d"/>
+    <rect x="60" y="480" width="480" height="140" rx="2" fill="#2a2a32"/>
+
+    <!-- chair back hint -->
+    <rect x="180" y="180" width="240" height="320" rx="60" fill="#15151a"/>
+
+    <!-- body / shirt -->
+    <path d="M180 470 C180 380 220 340 300 340 C380 340 420 380 420 470 L420 480 L180 480 Z" fill="url(#shirtGrad)"/>
+    <path d="M270 340 L330 340 L320 380 L280 380 Z" fill="#0b0b0d"/>
+
+    <!-- neck -->
+    <rect x="280" y="310" width="40" height="40" rx="10" fill="#e8b08a"/>
+
+    <!-- head -->
+    <circle cx="300" cy="250" r="80" fill="#f0bd95"/>
+
+    <!-- ears -->
+    <circle cx="222" cy="255" r="12" fill="#f0bd95"/>
+    <circle cx="378" cy="255" r="12" fill="#f0bd95"/>
+
+    <!-- hair -->
+    <path d="M222 235 C215 170 250 150 300 150 C350 150 385 170 378 235 C378 200 360 180 330 178 C320 190 290 192 270 178 C245 182 225 200 222 235 Z" fill="#1a1410"/>
+    <path d="M220 230 C225 200 222 245 230 270 C215 260 210 240 220 230 Z" fill="#1a1410"/>
+    <path d="M380 230 C375 200 378 245 370 270 C385 260 390 240 380 230 Z" fill="#1a1410"/>
+
+    <!-- eyebrows -->
+    <rect x="262" y="238" width="26" height="6" rx="3" fill="#1a1410"/>
+    <rect x="312" y="238" width="26" height="6" rx="3" fill="#1a1410"/>
+
+    <!-- glasses -->
+    <rect x="256" y="248" width="38" height="28" rx="8" fill="none" stroke="#1c1c22" stroke-width="5"/>
+    <rect x="306" y="248" width="38" height="28" rx="8" fill="none" stroke="#1c1c22" stroke-width="5"/>
+    <line x1="294" y1="260" x2="306" y2="260" stroke="#1c1c22" stroke-width="5"/>
+    <line x1="256" y1="255" x2="240" y2="250" stroke="#1c1c22" stroke-width="4"/>
+    <line x1="344" y1="255" x2="360" y2="250" stroke="#1c1c22" stroke-width="4"/>
+
+    <!-- eyes -->
+    <circle cx="275" cy="262" r="4" fill="#1c1c22"/>
+    <circle cx="325" cy="262" r="4" fill="#1c1c22"/>
+
+    <!-- nose -->
+    <path d="M298 268 Q295 285 305 288" stroke="#cf9a72" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- smile -->
+    <path d="M278 300 Q300 318 322 300" stroke="#7a4a2f" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- subtle cheek accent -->
+    <circle cx="260" cy="290" r="10" fill="#e89a78" opacity="0.25"/>
+    <circle cx="340" cy="290" r="10" fill="#e89a78" opacity="0.25"/>
+
+    <!-- arms resting on desk -->
+    <path d="M195 470 C190 430 210 400 240 400 L250 470 Z" fill="url(#shirtGrad)"/>
+    <path d="M405 470 C410 430 390 400 360 400 L350 470 Z" fill="url(#shirtGrad)"/>
+
+    <!-- hands -->
+    <circle cx="248" cy="468" r="16" fill="#f0bd95"/>
+    <circle cx="352" cy="468" r="16" fill="#f0bd95"/>
+
+    <!-- laptop -->
+    <g>
+      <path d="M225 478 L375 478 L390 510 L210 510 Z" fill="#2c2c34"/>
+      <rect x="232" y="400" width="136" height="80" rx="4" fill="#1a1a20" stroke="#3a3a44" stroke-width="2" transform="rotate(0)"/>
+      <rect x="238" y="406" width="124" height="68" rx="2" fill="#0e0e12"/>
+      <rect x="246" y="414" width="60" height="6" rx="2" fill="#00ff99" opacity="0.85"/>
+      <rect x="246" y="426" width="90" height="5" rx="2" fill="#00ff99" opacity="0.5"/>
+      <rect x="246" y="436" width="70" height="5" rx="2" fill="#00ff99" opacity="0.5"/>
+      <rect x="246" y="446" width="100" height="5" rx="2" fill="#00ff99" opacity="0.35"/>
+      <rect x="246" y="456" width="50" height="5" rx="2" fill="#00ff99" opacity="0.35"/>
+    </g>
+
+    <!-- coffee mug -->
+    <rect x="440" y="448" width="34" height="32" rx="4" fill="#e6e6ea"/>
+    <path d="M474 456 q14 0 14 12 q0 12 -14 12" fill="none" stroke="#e6e6ea" stroke-width="5"/>
+    <ellipse cx="457" cy="448" rx="17" ry="4" fill="#cfcfd6"/>
+
+    <!-- accent dot top right like header logo -->
+    <circle cx="520" cy="100" r="6" fill="#00ff99"/>
+  </g>
+
+  <!-- ring border -->
+  <circle cx="300" cy="300" r="278" fill="none" stroke="#00ff99" stroke-width="3" opacity="0.5"/>
+</svg>
