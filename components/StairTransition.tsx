@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const stairAnimation = {
   initial: { top: "0%" },
@@ -14,9 +15,11 @@ const reverseIndex = (index: number) => {
 };
 
 export default function StairTransition() {
+  const pathname = usePathname();
+
   return (
-    <>
-      <div className="fixed inset-0 z-50 pointer-events-none flex">
+    <AnimatePresence mode="wait">
+      <div key={pathname} className="fixed inset-0 z-50 pointer-events-none flex">
         {[...Array(6)].map((_, index) => (
           <motion.div
             key={index}
@@ -33,6 +36,6 @@ export default function StairTransition() {
           />
         ))}
       </div>
-    </>
+    </AnimatePresence>
   );
 }
