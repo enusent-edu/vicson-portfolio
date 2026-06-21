@@ -13,9 +13,19 @@ export function Sheet({
   onOpenChange: (open: boolean) => void;
   children: React.ReactNode;
 }) {
+  React.useEffect(() => {
+    if (open) {
+      const original = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = original;
+      };
+    }
+  }, [open]);
+
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-50">
+    <div className="fixed inset-0 z-[100]">
       <div
         className="absolute inset-0 bg-black/60 animate-fade-in"
         onClick={() => onOpenChange(false)}
@@ -37,7 +47,7 @@ export function SheetContent({
   return (
     <div
       className={cn(
-        "absolute right-0 top-0 h-full w-[75%] max-w-sm bg-secondary border-l border-white/10 p-8 flex flex-col gap-8 animate-fade-in",
+        "absolute right-0 top-0 h-full w-[75%] max-w-sm bg-primary border-l border-white/10 p-8 flex flex-col gap-8 animate-fade-in overflow-y-auto",
         className
       )}
     >
