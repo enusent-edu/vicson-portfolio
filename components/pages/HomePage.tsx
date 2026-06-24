@@ -18,20 +18,48 @@ export default function HomePage() {
   });
 
   return (
-    <section className="py-12 xl:py-0">
+    <section className="py-12 xl:py-0 relative z-10">
       <div className="container mx-auto px-6">
         <div className="flex flex-col xl:flex-row items-center justify-between gap-12 xl:gap-8">
           <div className="text-center xl:text-left order-2 xl:order-none">
+
+            {/* Terminal CLI Box */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="terminal-box inline-block mb-6 text-left"
+            >
+              <div className="terminal-header">
+                <span className="terminal-dot" style={{ background: "#ff5f57" }} />
+                <span className="terminal-dot" style={{ background: "#febc2e" }} />
+                <span className="terminal-dot" style={{ background: "#28c840" }} />
+                <span className="ml-2 text-white/30 text-xs">~/portfolio</span>
+              </div>
+              <div className="px-4 py-3 space-y-1">
+                <p className="terminal-line"><span>$</span> <span className="cmd">whoami</span></p>
+                <p className="terminal-line"><span className="comment"># Full-Stack Developer · Philippines</span></p>
+                <p className="terminal-line"><span>$</span> <span className="cmd">skills --list</span></p>
+                <p className="terminal-line"><span>[</span> Next.js, Supabase, Docker, Cloudflare <span>]</span></p>
+                <p className="terminal-line"><span>$</span> <span className="cmd">status</span></p>
+                <p className="terminal-line"><span>✓</span> <span className="cmd">Available for hire</span> <span className="cursor-blink">▌</span></p>
+              </div>
+            </motion.div>
+
             <motion.span
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-accent font-medium tracking-wide"
+              className="text-accent font-medium tracking-wide block"
             >
               {t("home.greeting")}
             </motion.span>
 
-            <h1 className="h1 text-4xl sm:text-5xl xl:text-6xl font-bold mt-3 leading-tight">
+            {/* Glitch Name */}
+            <h1
+              className="glitch h1 text-4xl sm:text-5xl xl:text-6xl font-bold mt-3 leading-tight"
+              data-text={isComplete ? "Vicson L. Vidallon" : displayText}
+            >
               {displayText}
               {!isComplete && <span className="typewriter-cursor" />}
             </h1>

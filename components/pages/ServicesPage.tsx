@@ -35,7 +35,7 @@ const services: Service[] = [
     title: "Self-Hosted Deployment",
     description:
       "Dockerized apps deployed on owned infrastructure with Cloudflare Tunnel — no hyperscaler bills, full control.",
-    stack: ["Docker", "Cloudflare Tunnel", "Linux VPS"],
+    stack: ["Docker", "Cloudflare Tunnel", "Linux VPS", "Home Lab", "MikroTik"],
     href: "/contact",
   },
   {

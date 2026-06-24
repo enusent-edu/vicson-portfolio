@@ -21,6 +21,7 @@ import {
   SiNodedotjs,
   SiLinux,
 } from "react-icons/si";
+import { FaNetworkWired, FaServer } from "react-icons/fa";
 
 const aboutInfo = [
   { field: "Name", value: "Vicson L. Vidallon" },
@@ -69,6 +70,8 @@ const skills = [
   { icon: <SiCloudflare />, name: "Cloudflare" },
   { icon: <SiLinux />, name: "Linux VPS" },
   { icon: <SiGit />, name: "Git" },
+  { icon: <FaServer />, name: "Home Lab" },
+  { icon: <FaNetworkWired />, name: "MikroTik" },
 ];
 
 export default function ResumePage() {

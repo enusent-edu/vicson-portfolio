@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import { LanguageProvider } from "@/context/LanguageContext";
+import ParticleBackground from "@/components/ParticleBackground";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
     <html lang="en" className={jetbrainsMono.variable}>
       <body className="font-primary custom-scrollbar">
         <LanguageProvider>
+          <ParticleBackground />
           <Header />
           <StairTransition />
           <PageTransition>{children}</PageTransition>

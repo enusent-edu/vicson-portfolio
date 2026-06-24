@@ -63,3 +63,79 @@ body {
 .stair-panel {
   background-color: #00ff99;
 }
+
+/* ── Glitch Effect ─────────────────────────────────────────── */
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: transparent;
+}
+.glitch::before {
+  color: #00ff99;
+  animation: glitch-1 3s infinite linear;
+  clip-path: polygon(0 20%, 100% 20%, 100% 35%, 0 35%);
+}
+.glitch::after {
+  color: #ff0055;
+  animation: glitch-2 3s infinite linear;
+  clip-path: polygon(0 60%, 100% 60%, 100% 75%, 0 75%);
+}
+@keyframes glitch-1 {
+  0%, 90%, 100% { transform: translate(0); opacity: 0; }
+  92% { transform: translate(-3px, 1px); opacity: 0.7; }
+  94% { transform: translate(3px, -1px); opacity: 0.7; }
+  96% { transform: translate(-2px, 0); opacity: 0.5; }
+}
+@keyframes glitch-2 {
+  0%, 90%, 100% { transform: translate(0); opacity: 0; }
+  93% { transform: translate(3px, 2px); opacity: 0.6; }
+  95% { transform: translate(-3px, -1px); opacity: 0.6; }
+  97% { transform: translate(2px, 1px); opacity: 0.4; }
+}
+
+/* ── Terminal CLI Intro ─────────────────────────────────────── */
+.terminal-box {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 255, 153, 0.2);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  font-family: var(--font-jetbrainsMono), monospace;
+}
+.terminal-header {
+  background: rgba(0, 255, 153, 0.05);
+  border-bottom: 1px solid rgba(0, 255, 153, 0.1);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px 8px 0 0;
+}
+.terminal-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+}
+.terminal-line {
+  color: rgba(0, 255, 153, 0.5);
+  font-size: 0.75rem;
+}
+.terminal-line span {
+  color: #00ff99;
+}
+.terminal-line .cmd {
+  color: #fff;
+}
+.terminal-line .comment {
+  color: rgba(255,255,255,0.3);
+}
+
+/* Blinking cursor for terminal */
+.cursor-blink {
+  animation: blink 1s infinite;
+  color: #00ff99;
+}
