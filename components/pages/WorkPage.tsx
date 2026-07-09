@@ -76,6 +76,56 @@ const projects: Project[] = [
     live: "https://pos.powerlife-shop.com",
     status: "live",
   },
+  {
+    num: "07",
+    category: "Demo / Coffee Shop",
+    title: "Coffee Shop 1",
+    description:
+      "Next.js coffee shop landing page with menu and ambiance showcase.",
+    stack: ["Next.js", "Cloudflare"],
+    live: "https://coffeeshop1.powerlife-shop.com",
+    status: "live",
+  },
+  {
+    num: "08",
+    category: "Demo / Coffee Shop",
+    title: "Coffee Shop 2",
+    description:
+      "Alternate coffee shop landing page design with testimonials and gallery.",
+    stack: ["Next.js", "Cloudflare"],
+    live: "https://coffeeshop2.powerlife-shop.com",
+    status: "live",
+  },
+  {
+    num: "09",
+    category: "Demo / Hospitality",
+    title: "Hotel Booking",
+    description:
+      "React-based hotel booking landing page demo.",
+    stack: ["React", "Cloudflare"],
+    live: "https://hotel.powerlife-shop.com",
+    status: "live",
+  },
+  {
+    num: "10",
+    category: "Demo / Food & Beverage",
+    title: "Restaurant",
+    description:
+      "Next.js restaurant landing page demo with menu presentation.",
+    stack: ["Next.js", "Cloudflare"],
+    live: "https://restaurant.powerlife-shop.com",
+    status: "live",
+  },
+  {
+    num: "11",
+    category: "Demo / Healthcare",
+    title: "HealthCare",
+    description:
+      "Vanilla JS healthcare landing page fundamentals demo.",
+    stack: ["HTML5", "CSS3", "JavaScript"],
+    live: "https://healthcare.powerlife-shop.com",
+    status: "live",
+  },
 ];
 
 export default function WorkPage() {

@@ -18,6 +18,9 @@ import {
   SiPostgresql,
   SiGit,
   SiReact,
+  SiFirebase,
+  SiGoogleappsscript,
+  SiGooglecloud,
   SiNodedotjs,
   SiLinux,
 } from "react-icons/si";
@@ -72,6 +75,9 @@ const skills = [
   { icon: <SiGit />, name: "Git" },
   { icon: <FaServer />, name: "Home Lab" },
   { icon: <FaNetworkWired />, name: "MikroTik" },
+  { icon: <SiFirebase />, name: "Firebase" },
+  { icon: <SiGoogleappsscript />, name: "Google Apps Script" },
+  { icon: <SiGooglecloud />, name: "Cloud Run" },
 ];
 
 export default function ResumePage() {
