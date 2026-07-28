@@ -126,6 +126,26 @@ const projects: Project[] = [
     live: "https://healthcare.powerlife-shop.com",
     status: "live",
   },
+  {
+    num: "12",
+    category: "Demo / Retail",
+    title: "PharmaPOS",
+    description:
+      "Pharmacy point-of-sale demo with inventory and prescription tracking.",
+    stack: ["Next.js", "Supabase", "Docker"],
+    live: "https://pos.powerlife-shop.com",
+    status: "in-progress",
+  },
+  {
+    num: "13",
+    category: "Demo / Education",
+    title: "School LMS",
+    description:
+      "Learning management system demo \u2014 currently on hold for improvements.",
+    stack: ["Next.js", "Supabase", "Docker"],
+    live: "https://lms.powerlife-shop.com",
+    status: "in-progress",
+  },
 ];
 
 export default function WorkPage() {
